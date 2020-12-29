@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Abbreviations</string>
+
+    <string name="find_abbreviation">Find abbreviation</string>
+    <string name="search">Search</string>
+
+</resources>
