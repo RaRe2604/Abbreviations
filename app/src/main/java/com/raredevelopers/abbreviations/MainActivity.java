@@ -17,7 +17,6 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> arrayList;
     final String[] alphabets = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"};
     RecyclerView recyclerView;
 
@@ -31,15 +30,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        searchButton = ((ImageButton) findViewById(R.id.search_button));
+        editText = findViewById(R.id.search_text);
+        recyclerView = findViewById(R.id.recycler_view);
+        searchButton = findViewById(R.id.search_button);
         searchButton.setEnabled(true);
         searchButton.setOnClickListener(e -> showToast());
-
-        editText = ((EditText) findViewById(R.id.search_text));
-
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        arrayList = new ArrayList<>();
-
+        
         addIcons();
     }
 
