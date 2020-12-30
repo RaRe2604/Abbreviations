@@ -12,9 +12,6 @@ import android.widget.ImageButton;
 
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class MainActivity extends AppCompatActivity {
 
     final String[] alphabets = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"};
@@ -22,17 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TOAST_TEXT = "Clicked ";
 
-    private ImageButton searchButton;
     private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.search_text);
         recyclerView = findViewById(R.id.recycler_view);
-        searchButton = findViewById(R.id.search_button);
+        ImageButton searchButton = findViewById(R.id.search_button);
         searchButton.setEnabled(true);
         searchButton.setOnClickListener(e -> showToast());
         
